@@ -5,16 +5,16 @@ public class BerkeleyAlgo {
         System.out.println("Enter the number of Clocks : ");
         int numNodes = sc.nextInt();
         
-        int[] localClocks = new int[numNodes];
+        double[] localClocks = new double[numNodes];
         
         for(int i=0; i<numNodes; i++){
             System.out.println("Enter the clock values of clock "+i+" : ");
-            localClocks[i] = sc.nextInt();
+            localClocks[i] = sc.nextDouble();
         }
         
-        int master = localClocks[0];
+        double master = localClocks[0];
         
-        int diff = 0;
+        double diff = 0;
         for(int i=0; i<numNodes; i++){
             diff = diff + (localClocks[i] - master);
         }
